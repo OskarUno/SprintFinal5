@@ -3,6 +3,7 @@ package com.awakelab.oskar.sprintfinal5
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.awakelab.oskar.sprintfinal5.databinding.ArticuloLayoutBinding
 
 class MainAdapter(tienda: List<Articulo>) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
@@ -31,7 +32,10 @@ class MainAdapter(tienda: List<Articulo>) : RecyclerView.Adapter<MainAdapter.Vie
     class ViewHolder(val binding: ArticuloLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         // class ViewHolder(val binding: View) :RecyclerView.ViewHolder(binding.root) {
         fun bind(articulo: Articulo) {
-            binding.tv.text = articulo.nombre
+            binding.tvNombre.text = articulo.nombre
+            binding.tvDetalle.text = articulo.tipo
+            binding.tvPrecio.text = articulo.precio.toString()
+            binding.iv.load(articulo.imgUrl)
         }
 
     }

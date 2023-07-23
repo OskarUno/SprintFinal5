@@ -10,11 +10,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl1"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv3"
@@ -88,13 +90,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMain"
-        android:layout_width="409dp"
-        android:layout_height="612dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="1dp"
-        tools:listitem="@layout/articulo_layout"
+        android:background="#E1D8A9"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cl1" />
+        app:layout_constraintTop_toBottomOf="@+id/cl1"
+        tools:listitem="@layout/articulo_layout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
