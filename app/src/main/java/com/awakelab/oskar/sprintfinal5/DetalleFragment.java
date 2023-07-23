@@ -24,6 +24,7 @@ public class DetalleFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+
     public DetalleFragment() {
         // Required empty public constructor
     }
