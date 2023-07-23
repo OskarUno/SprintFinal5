@@ -2,14 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment1"
+    android:id="@+id/fragment2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment">
+    tools:context=".CarroFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl1"
+        android:id="@+id/ConstraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,16 +17,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv3"
+            android:id="@+id/cv2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">>
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/clo"
+                android:id="@+id/cl3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#FFE600"
@@ -50,7 +50,7 @@
                     android:layout_height="65dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="@string/mercado_nliebre"
+                    android:text="@string/carro_de_compra"
                     android:textAlignment="textStart"
                     android:textSize="24sp"
                     app:layout_constraintBottom_toTopOf="@+id/tvDescripcion"
@@ -58,18 +58,6 @@
                     app:layout_constraintHorizontal_bias="0.391"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageButton
-                    android:id="@+id/ivCarro"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="28dp"
-                    android:background="#FFE600"
-                    android:contentDescription="@string/carro_de_compras"
-                    app:layout_constraintBottom_toBottomOf="@+id/titulo1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/titulo1"
-                    app:srcCompat="@drawable/carrito_de_compras" />
 
                 <ImageView
                     android:id="@+id/logo"
@@ -81,8 +69,20 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/titulo1"
                     app:srcCompat="@drawable/iconmeli" />
+
+                <ImageButton
+                    android:id="@+id/deleteArticulos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="28dp"
+                    android:contentDescription="@string/eliminar_carro"
+                    android:src="@drawable/eliminar_32"
+                    app:layout_constraintBottom_toBottomOf="@+id/titulo1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/titulo1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

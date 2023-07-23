@@ -5,14 +5,18 @@
     android:id="@+id/nav_graph.xml"
     app:startDestination="@id/mainFragment">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.awakelab.oskar.sprintfinal5.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.awakelab.oskar.sprintfinal5.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_carroFragment_btn"
+            app:destination="@id/carroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carroFragment"
+        android:name="com.awakelab.oskar.sprintfinal5.CarroFragment"
+        android:label="fragment_carro"
+        tools:layout="@layout/fragment_carro" />
 </navigation>

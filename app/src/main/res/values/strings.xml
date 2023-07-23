@@ -2,4 +2,11 @@
     <string name="app_name">SprintFinal5</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo_mercado_liebre">Logo Mercado Liebre</string>
+    <string name="carro_de_compras">Carro de Compras</string>
+    <string name="mercado_nliebre">mercado \nliebre</string>
+    <string name="elige_lo_que_quieras">Elige lo que quieras !!!!</string>
+    <string name="carro_de_compra">Carro de Compras</string>
+    <string name="eliminar_carro">Eliminar Carro</string>
+    <string name="by_oskaruno">By OskarUno</string>
 </resources>

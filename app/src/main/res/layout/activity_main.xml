@@ -6,16 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
-
-
     <TextView
         android:id="@+id/tvBy"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#E18658"
-        android:text="By OskarUno"
+        android:text="@string/by_oskaruno"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,12 +20,13 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
-        android:name="com.awakelab.oskar.sprintfinal5.MainFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/tvBy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:navGraph="@navigation/nav_graph"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
