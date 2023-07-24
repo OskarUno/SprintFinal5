@@ -14,4 +14,8 @@
     <string name="nombre_del_articulo">Nombre del Articulo</string>
     <string name="_100000">$100000</string>
     <string name="agregar_articulo">Agregar Articulo</string>
+    <string name="imagen">Imagen</string>
+    <string name="_10000">$10000</string>
+    <string name="detalle">Detalle</string>
+    <string name="nombre">Nombre</string>
 </resources>

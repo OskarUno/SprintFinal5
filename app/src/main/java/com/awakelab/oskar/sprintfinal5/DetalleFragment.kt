@@ -32,8 +32,7 @@ class DetalleFragment : Fragment(), MainAdapter.ArticuloCallback {
         }
 
         binding.btnAgregarArticulo.setOnClickListener { v: View ->
-            val nombre: String
-            nombre = binding.tvNombreDetalle.text.toString()
+            val nombre: String = binding.tvNombreDetalle.text.toString()
             Toast.makeText(context, "Producto Agregado $nombre", Toast.LENGTH_SHORT).show()
         }
     }

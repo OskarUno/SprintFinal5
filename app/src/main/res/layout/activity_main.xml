@@ -10,7 +10,7 @@
         android:id="@+id/tvBy"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#E18658"
+        android:background="#DCE158"
         android:text="@string/by_oskaruno"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
