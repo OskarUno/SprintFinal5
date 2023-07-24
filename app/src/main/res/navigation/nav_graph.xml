@@ -26,5 +26,9 @@
         android:id="@+id/detalleFragment"
         android:name="com.awakelab.oskar.sprintfinal5.DetalleFragment"
         android:label="fragment_detalle"
-        tools:layout="@layout/fragment_detalle" />
+        tools:layout="@layout/fragment_detalle" >
+        <action
+            android:id="@+id/action_detalleFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>

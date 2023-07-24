@@ -5,7 +5,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import coil.load
 import com.awakelab.oskar.sprintfinal5.databinding.FragmentDetalleBinding
 
@@ -17,43 +19,41 @@ class DetalleFragment : Fragment(), MainAdapter.ArticuloCallback {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentDetalleBinding.inflate(layoutInflater)
-
-//        val id = arguments?.getString("Id")
-        Log.d("Logger","Desde OnCreate DetalleFragment")
-//        binding.tvNombreDetalle.text = id.toString()
+        Log.d("Logger", "Desde OnCreate DetalleFragment")
         initAdapeter()
-
-
-
-
-        return  binding.root
+        listeners()
+        return binding.root
 
     }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        println("Desde onCrteateView")
-//        val provider = arguments?.getString("Id")
-//        println("Desde onCrteateView $provider")
-//        FragmentDetalleBinding.inflate(layoutInflater).tvNombreDetalle.text = provider.toString()
-//    }
+    private fun listeners() {
+        binding.btnAtras.setOnClickListener { v: View? ->
+            findNavController().navigate(R.id.action_detalleFragment_to_mainFragment)
+        }
+
+        binding.btnAgregarArticulo.setOnClickListener { v: View ->
+            val nombre: String
+            nombre = binding.tvNombreDetalle.text.toString()
+            Toast.makeText(context, "Producto Agregado $nombre", Toast.LENGTH_SHORT).show()
+        }
+    }
 
     override fun showArticulo(nombre: String) {
-        Log.d("Logger","Desde ShowArticulo DetalleFragment, $nombre")
+        Log.d("Logger", "Desde ShowArticulo DetalleFragment, $nombre")
         binding.tvNombreDetalle.text = nombre
     }
 
-    private fun initAdapeter(){
+    private fun initAdapeter() {
         val provider = arguments?.getString("Id")
         val articulos = Tienda.getTienda()
-        for(item in articulos ){
-           if(item.idItem == provider) {
-               Log.d("Logger", "Igual ${item.nombre}")
-               binding.tvNombreDetalle.text = item.nombre
-               binding.tvDetalleArticulo.text = item.tipo
-               binding.tvPrecioDetalle.text = item.precio.toString()
-               binding.ivDetalle.load(item.imgUrl)
-           }
+        for (item in articulos) {
+            if (item.idItem == provider) {
+                Log.d("Logger", "Igual ${item.nombre}")
+                binding.tvNombreDetalle.text = item.nombre
+                binding.tvDetalleArticulo.text = item.tipo
+                binding.tvPrecioDetalle.text = item.precio.toString()
+                binding.ivDetalle.load(item.imgUrl)
+            }
         }
 
         Log.d("Logger", "Desde initAdapeter $provider")
