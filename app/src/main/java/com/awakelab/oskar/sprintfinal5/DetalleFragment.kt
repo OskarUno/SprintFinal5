@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import coil.load
 import com.awakelab.oskar.sprintfinal5.databinding.FragmentDetalleBinding
 
-class DetalleFragment : Fragment(), MainAdapter.ArticuloCallback {
+class DetalleFragment : Fragment() {
     lateinit var binding: FragmentDetalleBinding
 
     override fun onCreateView(
@@ -23,7 +23,6 @@ class DetalleFragment : Fragment(), MainAdapter.ArticuloCallback {
         initAdapeter()
         listeners()
         return binding.root
-
     }
 
     private fun listeners() {
@@ -35,11 +34,6 @@ class DetalleFragment : Fragment(), MainAdapter.ArticuloCallback {
             val nombre: String = binding.tvNombreDetalle.text.toString()
             Toast.makeText(context, "Producto Agregado $nombre", Toast.LENGTH_SHORT).show()
         }
-    }
-
-    override fun showArticulo(nombre: String) {
-        Log.d("Logger", "Desde ShowArticulo DetalleFragment, $nombre")
-        binding.tvNombreDetalle.text = nombre
     }
 
     private fun initAdapeter() {
