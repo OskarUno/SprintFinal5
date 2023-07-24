@@ -1,7 +1,7 @@
 package com.awakelab.oskar.sprintfinal5
 
 data class Articulo(
-    val id: String,
+    val idItem: String,
     val nombre: String,
     val tipo: String,
     val precio: Int,

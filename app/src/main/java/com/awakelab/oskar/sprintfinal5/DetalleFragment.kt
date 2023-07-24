@@ -1,65 +1,64 @@
-package com.awakelab.oskar.sprintfinal5;
+package com.awakelab.oskar.sprintfinal5
 
-import android.os.Bundle;
+import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import coil.load
+import com.awakelab.oskar.sprintfinal5.databinding.FragmentDetalleBinding
 
-import androidx.fragment.app.Fragment;
+class DetalleFragment : Fragment(), MainAdapter.ArticuloCallback {
+    lateinit var binding: FragmentDetalleBinding
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentDetalleBinding.inflate(layoutInflater)
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link DetalleFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class DetalleFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+//        val id = arguments?.getString("Id")
+        Log.d("Logger","Desde OnCreate DetalleFragment")
+//        binding.tvNombreDetalle.text = id.toString()
+        initAdapeter()
 
 
-    public DetalleFragment() {
-        // Required empty public constructor
+
+
+        return  binding.root
+
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment DetalleFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static DetalleFragment newInstance(String param1, String param2) {
-        DetalleFragment fragment = new DetalleFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//        println("Desde onCrteateView")
+//        val provider = arguments?.getString("Id")
+//        println("Desde onCrteateView $provider")
+//        FragmentDetalleBinding.inflate(layoutInflater).tvNombreDetalle.text = provider.toString()
+//    }
+
+    override fun showArticulo(nombre: String) {
+        Log.d("Logger","Desde ShowArticulo DetalleFragment, $nombre")
+        binding.tvNombreDetalle.text = nombre
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+    private fun initAdapeter(){
+        val provider = arguments?.getString("Id")
+        val articulos = Tienda.getTienda()
+        for(item in articulos ){
+           if(item.idItem == provider) {
+               Log.d("Logger", "Igual ${item.nombre}")
+               binding.tvNombreDetalle.text = item.nombre
+               binding.tvDetalleArticulo.text = item.tipo
+               binding.tvPrecioDetalle.text = item.precio.toString()
+               binding.ivDetalle.load(item.imgUrl)
+           }
         }
-    }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detalle, container, false);
+        Log.d("Logger", "Desde initAdapeter $provider")
+
+        binding.root
+
     }
 }

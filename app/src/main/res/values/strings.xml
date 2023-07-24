@@ -9,4 +9,9 @@
     <string name="carro_de_compra">Carro de Compras</string>
     <string name="eliminar_carro">Eliminar Carro</string>
     <string name="by_oskaruno">By OskarUno</string>
+    <string name="detalle_del_articulo">Detalle del Articulo</string>
+    <string name="imagen_de_articulo">Imagen de Articulo</string>
+    <string name="nombre_del_articulo">Nombre del Articulo</string>
+    <string name="_100000">$100000</string>
+    <string name="agregar_articulo">Agregar Articulo</string>
 </resources>
