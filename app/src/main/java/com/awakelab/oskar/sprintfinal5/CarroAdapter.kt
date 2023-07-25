@@ -8,7 +8,7 @@ import com.awakelab.oskar.sprintfinal5.databinding.ItemCarroLayoutBinding
 
 class CarroAdapter() : RecyclerView.Adapter<CarroAdapter.ViewHolder>(){
     private lateinit var listaArticulos: MutableList<Articulo>
-    var carroCompras = mutableListOf<Articulo>()
+    private lateinit var carroCompras : MutableList<Articulo>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarroAdapter.ViewHolder {
        val binding = ItemCarroLayoutBinding.inflate(LayoutInflater.from(parent.context),parent,false)
