@@ -1,7 +1,7 @@
 package com.awakelab.oskar.sprintfinal5
 
 data class Articulo(
-    val idItem: String,
+    val idItem: Int,
     val nombre: String,
     val tipo: String,
     val precio: Int,
@@ -15,7 +15,7 @@ class Tienda {
             val tienda = mutableListOf<Articulo>()
             tienda.add(
                 Articulo(
-                    "1",
+                    1,
                     "Merrel",
                     "Zapatilla Mujer Wildwood",
                     29900,
@@ -24,7 +24,7 @@ class Tienda {
             )
             tienda.add(
                 Articulo(
-                    "2",
+                    2,
                     "Columbia",
                     "Botín Redmond™ V2 Mid WP",
                     103990,
@@ -33,7 +33,7 @@ class Tienda {
             )
             tienda.add(
                 Articulo(
-                    "3",
+                    3,
                     "Hush Puppies",
                     "Botin Cuero Hombre Maxwell",
                     44990,
@@ -42,7 +42,7 @@ class Tienda {
             )
             tienda.add(
                 Articulo(
-                    "4",
+                    4,
                     "Rockford",
                     "Botín Hombre Egger",
                     59994,
@@ -51,7 +51,7 @@ class Tienda {
             )
             tienda.add(
                 Articulo(
-                    "5",
+                    5,
                     "Caterpillar",
                     "Botín Renovate WP Hombre",
                     35200,
@@ -60,7 +60,7 @@ class Tienda {
             )
             tienda.add(
                 Articulo(
-                    "6",
+                    6,
                     "Norseg",
                     "Botín de Seguridad Hombre New Corner",
                     59990,
@@ -69,7 +69,7 @@ class Tienda {
             )
             tienda.add(
                 Articulo(
-                    "7",
+                    7,
                     "Merrell",
                     "Botin Hombre Wildwood Mid Waterproof",
                     69993,
@@ -78,7 +78,7 @@ class Tienda {
             )
             tienda.add(
                 Articulo(
-                    "8",
+                    8,
                     "Hush Puppies",
                     "Zapatilla Cuero Mujer Space",
                     18990,
@@ -87,7 +87,7 @@ class Tienda {
             )
             tienda.add(
                 Articulo(
-                    "9",
+                    9,
                     "Columbia",
                     "Facer 75 MID Outdry",
                     169400,
@@ -96,7 +96,7 @@ class Tienda {
             )
             tienda.add(
                 Articulo(
-                    "10",
+                    10,
                     "Hush Puppies",
                     "Zapato Cuero Hombre Intee",
                     59990,

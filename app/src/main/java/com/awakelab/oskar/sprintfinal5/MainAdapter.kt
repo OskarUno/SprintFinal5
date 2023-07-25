@@ -33,7 +33,7 @@ class MainAdapter(private val onClickListener: (Articulo) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(articulo: Articulo, onClickListener: (Articulo) -> Unit) {
-            binding.tvSkuItem.text = articulo.idItem
+            binding.tvSkuItem.text = articulo.idItem.toString()
             binding.tvNombre.text = articulo.nombre
             binding.tvDetalle.text = articulo.tipo
             binding.tvPrecio.text = articulo.precio.toString()
