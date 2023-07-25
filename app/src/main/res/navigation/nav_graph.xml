@@ -21,7 +21,11 @@
         android:id="@+id/carroFragment"
         android:name="com.awakelab.oskar.sprintfinal5.CarroFragment"
         android:label="fragment_carro"
-        tools:layout="@layout/fragment_carro" />
+        tools:layout="@layout/fragment_carro" >
+        <action
+            android:id="@+id/action_carroFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detalleFragment"
         android:name="com.awakelab.oskar.sprintfinal5.DetalleFragment"

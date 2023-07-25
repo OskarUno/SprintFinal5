@@ -29,7 +29,7 @@
                 android:id="@+id/cl3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FFE600"
+                android:background="@color/yellow"
                 tools:context=".MainActivity">
 
                 <TextView
@@ -39,6 +39,7 @@
                     android:layout_marginBottom="8dp"
                     android:text="@string/elige_lo_que_quieras"
                     android:textAlignment="center"
+                    android:textColor="@color/blue"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -52,6 +53,7 @@
                     android:layout_marginBottom="8dp"
                     android:text="@string/carro_de_compra"
                     android:textAlignment="textStart"
+                    android:textColor="@color/blue"
                     android:textSize="24sp"
                     app:layout_constraintBottom_toTopOf="@+id/tvDescripcion"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -80,9 +82,31 @@
                     app:layout_constraintBottom_toBottomOf="@+id/titulo1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/titulo1" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCarro"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/yellowLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ConstraintLayout2" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,7 @@ import com.awakelab.oskar.sprintfinal5.databinding.ArticuloLayoutBinding
 
 class MainAdapter(private val onClickListener: (Articulo) -> Unit) :
     RecyclerView.Adapter<MainAdapter.ViewHolder>() {
-    var listaArticulos = mutableListOf<Articulo>()
+    var listaArticulos = listOf<Articulo>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
@@ -33,6 +33,7 @@ class MainAdapter(private val onClickListener: (Articulo) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(articulo: Articulo, onClickListener: (Articulo) -> Unit) {
+            binding.tvSkuItem.text = articulo.idItem
             binding.tvNombre.text = articulo.nombre
             binding.tvDetalle.text = articulo.tipo
             binding.tvPrecio.text = articulo.precio.toString()

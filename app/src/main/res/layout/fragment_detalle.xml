@@ -5,6 +5,7 @@
     android:id="@+id/cl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yellowLight"
     tools:context=".DetalleFragment">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/detalle_del_articulo"
+        android:textColor="@color/blue"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/tvNombreDetalle"
         app:layout_constraintStart_toStartOf="@+id/tvNombreDetalle"
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/nombre_del_articulo"
+        android:textColor="@color/blue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/ivDetalle"
@@ -48,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/_100000"
+        android:textColor="@color/blue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/tvDetalleArticulo"
@@ -60,7 +64,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/blue"
         android:text="@string/agregar_articulo"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPrecioDetalle" />
@@ -70,8 +76,34 @@
         android:layout_width="150dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
+        android:backgroundTint="@color/blue"
         android:text="Atras"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btnAgregarArticulo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnAgregarArticulo" />
+
+    <TextView
+        android:id="@+id/tvSkuText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="SKU: "
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/ivDetalle"
+        app:layout_constraintEnd_toEndOf="@+id/ivDetalle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivDetalle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSkuItem2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="100"
+        android:textColor="@color/blue"
+        app:layout_constraintStart_toEndOf="@+id/tvSkuText2"
+        app:layout_constraintTop_toTopOf="@+id/tvSkuText2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

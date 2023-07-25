@@ -31,7 +31,7 @@
                 android:id="@+id/clo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FFE600"
+                android:background="@color/yellow"
                 tools:context=".MainActivity">
 
                 <TextView
@@ -41,6 +41,7 @@
                     android:layout_marginBottom="8dp"
                     android:text="@string/elige_lo_que_quieras"
                     android:textAlignment="center"
+                    android:textColor="@color/blue"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -54,6 +55,7 @@
                     android:layout_marginBottom="8dp"
                     android:text="@string/mercado_nliebre"
                     android:textAlignment="textStart"
+                    android:textColor="@color/blue"
                     android:textSize="24sp"
                     app:layout_constraintBottom_toTopOf="@+id/tvDescripcion"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +96,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="1dp"
-        android:background="#E1D8A9"
+        android:background="@color/yellowLight"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -18,4 +18,6 @@
     <string name="_10000">$10000</string>
     <string name="detalle">Detalle</string>
     <string name="nombre">Nombre</string>
+    <string name="sku">sku:</string>
+    <string name="_100">100</string>
 </resources>
